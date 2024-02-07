@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toy Machine</title>
+        <link href="styles/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1 style="text-align: center; font-family: 'Helvetica Neue', sans-serif; font-size: 32px; padding: 20px;">Toy Machine</h1>
+        <canvas id="myCanvas" width="100%" height="100%">
+            您的浏览器不支持 HTML5 canvas 标签。
+        </canvas>
+    <!--
+        <div style="text-align:center;vertical-align:middle;">
+            <label for="name">Enter the number of rows and columns(1~50):</label>
+            <input id="n" type="number" max="50" min="1" placeholder="row">
+            <input id="m" type="number" max="50" min="1" placeholder="column">
+            <input id="m" type="submit">
+        </div>
+    -->
+        <div class="container">
+            <div>
+                <label>Enter the code you write for the robot:</label>
+                <div>
+                    <textarea cols="30" rows="10" id="sample"></textarea>
+                </div>
+                <div>
+                    <input id="submit1" type="submit">
+                </div>
+            </div>
+            <div>
+                <label>Input:</label>
+                <div>
+                    <textarea cols="30" rows="3" id="input"></textarea>
+                </div>
+                <div>
+                    <input id="submit2" type="submit">
+                </div>
+                <label>Output:</label>
+                <div>
+                    <textarea cols="30" rows="3" id="output" readonly="1"></textarea>
+                </div>
+                <label id="stepl">Step:(max: 0 now:0)</label>
+                <div>
+                    <input id="step" type="range" min="0" max="0"></textarea>
+                    <input type="button" id="play" value="▶" style="width:32px;height:32px;bottom:5px;">
+                </div>
+                <div>
+                <label>slow</label>
+                <input id="speed" type="range" min="1" max="30" value="10"></textarea>
+                <label>fast</label>
+                </div>
+                
+            </div>
+            <div>
+                <label>RAM:</label>
+                <div class="ram1" id="ram">
+                </div>
+            </div>
+        </div>
+        <script defer src=".//scripts/main.js"></script>
+    </body>
+</html>
