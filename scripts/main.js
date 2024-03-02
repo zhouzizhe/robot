@@ -1,4 +1,4 @@
-var c=document.getElementById("myCanvas");
+﻿var c=document.getElementById("myCanvas");
 var ctx=c.getContext("2d");
 var ok1=0,ok2=0,display=0;
 var n = 0;
@@ -749,3 +749,11 @@ play.addEventListener("click", () => {
     run2();
     paint();
 });
+
+window.onbeforeunload = function (e) {
+    e = e || window.event
+    if (e) {
+        e.returnValue = '网站可能不会保存您的修改哦~'
+    }
+    return '网站可能不会保存您的修改哦~'
+    }
